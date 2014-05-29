@@ -25,7 +25,8 @@ def get_root_xmlns(etree_obj):
 
 def get_xmlns(etree_obj, xpath, namespace):
     """
-    return additional namespace from file. Needed if we want parse something like <gpxx:DisplayColor>DarkMagenta</gpxx:DisplayColor>
+    return additional namespace from file. Needed if we want parse
+    something like <gpxx:DisplayColor>DarkMagenta</gpxx:DisplayColor>
     """
     node = etree_obj.xpath(xpath, namespaces=namespace)[0].getchildren()[0]
     return node.nsmap[node.prefix]
@@ -76,7 +77,8 @@ def parse_gpx(etree_obj, namespace):
 def parse_track_points(etree_obj, namespace, namespace_set):
     """
         parse coordinates, elevation and time from GPX file and return
-        list like [{"lat":245324, "lon":243255, "ele":234232, "time":23:324:324Z}, {{"lat":245324, "lon":243255, "ele":234232, "time":23:324:324Z}}]
+        list like [{"lat":245324, "lon":243255, "ele":234232, "time":23:324:324Z},
+        {{"lat":245324, "lon":243255, "ele":234232, "time":23:324:324Z}}]
     """
     trkpts = etree_obj.xpath('/r:gpx//r:trk//r:trkseg//r:trkpt', namespaces=namespace)
 
