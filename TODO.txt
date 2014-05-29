@@ -1,2 +1,3 @@
 TODO show in the console length of the tracks
-TODO investigate possiblity to choose tolerance based on the length of the track and the number of points
+TODO investigate possiblity to choose tolerance based on the length of the track and the number of points. With diff length of coordinates and length of track need diff tolerance.
+for example for coordiate like 36.232 enough tolerance = 0,1 but for coordinate 36.25883873552084 need tolerance al least like 0,0001
