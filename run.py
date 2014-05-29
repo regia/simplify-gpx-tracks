@@ -9,6 +9,8 @@ import sys
 import traceback
 from lib import gpx, simplify
 
+TOLERANCE = 0.0001
+
 
 def simplify_track(filepath, filename, simplify_dir):
     """
@@ -18,7 +20,7 @@ def simplify_track(filepath, filename, simplify_dir):
     print "{0}:".format(filename)
     parsed_gpx, points = gpx.get_data(full_filename)
     print "\tPoints before simplifying: {0}".format(len(points))
-    simplified_points = simplify.simplify(points, 0.0001, True)
+    simplified_points = simplify.simplify(points, TOLERANCE, True)
     print "\tPoints after simplifying: {0}\n".format(len(simplified_points))
 
     with open(os.path.join(simplify_dir, filename), 'w') as f:

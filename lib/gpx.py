@@ -110,7 +110,7 @@ def get_data(filepath):
     root_xmlns_set = "{" + root_xmlns + "}"
     root_xmlns_dct = { "r": root_xmlns}
 
-    return parse_gpx(tree, root_namespace_dct), parse_track_points(tree, root_xmlns_dct, root_xmlns_set)
+    return parse_gpx(tree, root_xmlns_dct), parse_track_points(tree, root_xmlns_dct, root_xmlns_set)
 
 
 def generate_gpx(gpx_data, points):
