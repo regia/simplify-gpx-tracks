@@ -10,6 +10,7 @@ import traceback
 from lib import gpx, simplify
 
 TOLERANCE = 0.0001
+SIMPLIFIED_DIR = "simplified_tracks"
 
 
 def simplify_track(filepath, filename, simplify_dir):
@@ -37,7 +38,7 @@ def start():
     else:
         tracks_dir = sys.argv[1]
 
-    save_dir = os.path.join(tracks_dir, "simplified_tracks")
+    save_dir = os.path.join(tracks_dir, SIMPLIFIED_DIR)
 
     try:
         filenames = os.listdir(tracks_dir)
