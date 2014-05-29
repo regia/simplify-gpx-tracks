@@ -1,0 +1,2 @@
+TODO show in the console length of the tracks
+TODO investigate possiblity to choose tolerance based on the length of the track and the number of points
